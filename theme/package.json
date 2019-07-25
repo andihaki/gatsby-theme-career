@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-theme-welldone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andihaki/gatsby-theme-welldone.git",
+  "author": "Andi Hakim <andi.hakim.arif@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.40",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.40",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "styled-components": "^4.3.2"
+  }
+}
