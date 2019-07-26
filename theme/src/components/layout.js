@@ -1,6 +1,7 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import NavBar from "./ui/NavBar";
+import RemoveMargin from "./RemoveMargin";
 
 const globalMdx = {
   test: "siip!!"
@@ -13,6 +14,7 @@ const shortcodes = {
 export default ({ children }) => (
   <MDXProvider globalMdx={globalMdx} components={shortcodes}>
     <NavBar />
+    <RemoveMargin />
     <div>{children}</div>
   </MDXProvider>
 );
