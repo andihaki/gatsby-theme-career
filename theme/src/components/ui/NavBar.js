@@ -5,12 +5,22 @@ import { Link } from "gatsby";
 
 // import SearchIcon from "../../assets/search-icon.svg";
 
+const NavBackground = styled.div`
+  background-color: black;
+`;
+
 //https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf
 const Nav = styled.nav`
   font-size: 18px;
-  background-image: linear-gradient(260deg, #2376ae, 0%, #c16ecf 100%);
+  /* background-image: linear-gradient(260deg, #2376ae, 0%, #c16ecf 100%); */
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
+
+  max-width: 800px;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  padding: 0;
 
   /* on desktop view */
   @media screen and (min-width: 768px) {
@@ -142,44 +152,36 @@ const SearchInput = styled.input``;
 // `;
 
 const NavBar = () => {
-  // mungkin anti-pattern nih
-  // textInput must be declared here so the ref callback can refer to it
-  let textInput = null;
   const [burger, setBurger] = React.useState(false);
 
   return (
-    <Nav>
-      <NavToggle onClick={() => setBurger(!burger)}>
-        <Ntah>Burger</Ntah>
-      </NavToggle>
-      <Logo>Logo</Logo>
-      <Ul active={burger}>
-        <Li>
-          <Link to="/">
-            <h3>TokoFlix</h3>
-          </Link>
-        </Li>
-        <Li>
-          <Link to="/search">
-            <SearchInput
-              type="text"
-              placeholder="cari film"
-              name="search"
-              ref={input => {
-                textInput = input;
-              }}
-            />
-            <img src="" alt="search" onClick={() => console.log("clicked")} />
-          </Link>
-        </Li>
-        <Li>
-          <h5>Saldo: </h5>
-        </Li>
-        <Li>
-          <Link to="/filmku">Filmku</Link>
-        </Li>
-      </Ul>
-    </Nav>
+    <NavBackground>
+      <Nav>
+        <NavToggle onClick={() => setBurger(!burger)}>
+          <Ntah>Burger</Ntah>
+        </NavToggle>
+        <Logo>Logo</Logo>
+        <Ul active={burger}>
+          <Li>
+            <Link to="/">
+              <h3>TokoFlix</h3>
+            </Link>
+          </Li>
+          <Li>
+            <Link to="/search">
+              <SearchInput type="text" placeholder="cari film" name="search" />
+              <img src="" alt="search" onClick={() => console.log("clicked")} />
+            </Link>
+          </Li>
+          <Li>
+            <h5>Saldo: </h5>
+          </Li>
+          <Li>
+            <Link to="/filmku">Filmku</Link>
+          </Li>
+        </Ul>
+      </Nav>
+    </NavBackground>
   );
 };
 
