@@ -177,7 +177,7 @@ const NavBar = () => {
             <h5>Saldo: </h5>
           </Li>
           <Li>
-            <Link to="/filmku">Filmku</Link>
+            <Link to="/blog">Blog</Link>
           </Li>
         </Ul>
       </Nav>
