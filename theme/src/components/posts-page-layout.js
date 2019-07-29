@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 export default function PageTemplate({ data: { mdx } }) {
-  // console.log("posts-page-layout", mdx);
+  console.log("posts-page-layout", mdx);
 
   return (
     <div>
