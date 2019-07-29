@@ -53,6 +53,7 @@ class Cards extends React.Component {
       for (let i = 0; i < quantity; i++) {
         res.push(
           <Card
+            key={i}
             leftColor={this.getRandomColor()}
             rightColor={this.getRandomColor()}
           />

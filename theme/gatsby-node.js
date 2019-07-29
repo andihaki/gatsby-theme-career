@@ -1,3 +1,15 @@
+// create folder if not exist
+const fs = require("fs");
+exports.onPreBootstrap = ({ reporter }) => {
+  const contentPath = "src/posts";
+
+  // if folder not exist, then create it
+  if (!fs.existsSync(contentPath)) {
+    reporter.info(`creating ${contentPath} directory`);
+    fs.mkdirSync(contentPath);
+  }
+};
+
 const { createFilePath } = require("gatsby-source-filesystem");
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
