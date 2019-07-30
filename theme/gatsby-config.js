@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MDX Kitchen Sink`
+    title: `OurJobs`
   },
   plugins: [
     {

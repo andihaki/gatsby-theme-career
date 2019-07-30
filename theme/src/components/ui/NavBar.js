@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 // import SearchIcon from "../../assets/search-icon.svg";
 
@@ -151,6 +151,19 @@ const Logo = styled.a`
 
 const NavBar = () => {
   const [burger, setBurger] = React.useState(false);
+  const {
+    site: {
+      siteMetadata: { title }
+    }
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
 
   return (
     <NavBackground>
@@ -162,7 +175,7 @@ const NavBar = () => {
         <Ul active={burger}>
           <Li>
             <Link to="/">
-              <h3>OurJobs</h3>
+              <h3>{title}</h3>
             </Link>
           </Li>
           <Li>

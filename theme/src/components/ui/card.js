@@ -48,8 +48,8 @@ const CardColor = styled.p`
   }
 `;
 
-const H1 = styled.h1`
-  /* margin: 0 3px; */
+const Title = styled.h2`
+  padding-top: 1rem;
   text-align: center;
 `;
 
@@ -57,7 +57,7 @@ const Card = props => (
   <CardStyled>
     <Link to={props.slug}>
       <CardGradient {...props}>
-        <H1 aria-labelledby="Judul">{props.title}</H1>
+        <Title aria-labelledby="Judul">{props.title}</Title>
       </CardGradient>
       <CardColor color={props.leftColor}>{props.leftColor}</CardColor>
       <CardColor color={props.rightColor}>{props.rightColor}</CardColor>
