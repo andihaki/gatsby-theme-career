@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const CardStyled = styled.div`
   display: flex;
@@ -47,13 +48,20 @@ const CardColor = styled.p`
   }
 `;
 
+const H1 = styled.h1`
+  /* margin: 0 3px; */
+  text-align: center;
+`;
+
 const Card = props => (
   <CardStyled>
-    <CardGradient {...props}>
-      <h1 aria-labelledby="Judul">Judul Artikel</h1>
-    </CardGradient>
-    <CardColor color={props.leftColor}>{props.leftColor}</CardColor>
-    <CardColor color={props.rightColor}>{props.rightColor}</CardColor>
+    <Link to={props.slug}>
+      <CardGradient {...props}>
+        <H1 aria-labelledby="Judul">{props.title}</H1>
+      </CardGradient>
+      <CardColor color={props.leftColor}>{props.leftColor}</CardColor>
+      <CardColor color={props.rightColor}>{props.rightColor}</CardColor>
+    </Link>
   </CardStyled>
 );
 

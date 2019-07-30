@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import Cards from "./ui/cards";
 
 const BlogIndex = () => {
   const data = useStaticQuery(graphql`
@@ -25,8 +26,8 @@ const BlogIndex = () => {
 
   return (
     <div>
-      <h1>Blog posts</h1>
-      <ul>
+      <h1>Available Jobs: {posts.length}</h1>
+      {/* <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
             <Link to={post.fields.slug}>
@@ -35,7 +36,8 @@ const BlogIndex = () => {
             <p>{post.excerpt}</p>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      {posts.length && <Cards posts={posts} />}
     </div>
   );
 };

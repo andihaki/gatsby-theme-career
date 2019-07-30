@@ -23,7 +23,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: "slug",
       node,
-      value: `/blog${value}`
+      // value: `/blog${value}`
+      value: `${value}`
     });
   }
 };
@@ -59,6 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: node.fields.slug,
             component: require.resolve("./src/components/posts-page-layout.js"),
+            // component: require.resolve("./src/components/layout.js"),
             // context = can be used at page layout component
             context: { id: node.id }
           });

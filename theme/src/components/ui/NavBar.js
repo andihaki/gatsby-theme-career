@@ -105,8 +105,6 @@ const Logo = styled.a`
   }
 `;
 
-const SearchInput = styled.input``;
-
 // const Ul = styled.ul`
 //   /* position: fixed; */
 //   display: flex;
@@ -164,20 +162,17 @@ const NavBar = () => {
         <Ul active={burger}>
           <Li>
             <Link to="/">
-              <h3>TokoFlix</h3>
+              <h3>OurJobs</h3>
             </Link>
           </Li>
           <Li>
-            <Link to="/search">
-              <SearchInput type="text" placeholder="cari film" name="search" />
-              <img src="" alt="search" onClick={() => console.log("clicked")} />
-            </Link>
+            <Link to="/about">About Us</Link>
           </Li>
           <Li>
-            <h5>Saldo: </h5>
+            <Link to="/workplace">Our workplace</Link>
           </Li>
           <Li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">Vacancy</Link>
           </Li>
         </Ul>
       </Nav>

@@ -13,7 +13,7 @@ const CardsStyled = styled.div`
 class Cards extends React.Component {
   state = {
     colors: [],
-    cardsQuantity: 9
+    cardsQuantity: this.props.posts.length
   };
 
   componentDidMount() {
@@ -45,15 +45,20 @@ class Cards extends React.Component {
   };
 
   render() {
+    // console.log(this.props.posts);
     const { cardsQuantity } = this.state;
 
     const generateCards = quantity => {
       let res = [];
 
       for (let i = 0; i < quantity; i++) {
+        const { node } = this.props.posts[i];
+        // console.log(node);
         res.push(
           <Card
             key={i}
+            title={node.frontmatter.title}
+            slug={node.fields.slug}
             leftColor={this.getRandomColor()}
             rightColor={this.getRandomColor()}
           />
@@ -66,5 +71,58 @@ class Cards extends React.Component {
     return <CardsStyled>{generateCards(cardsQuantity)}</CardsStyled>;
   }
 }
+
+// const Cards = props => {
+//   const [colors, setColors] = React.useState([]);
+//   const [cardsQuantity, setCardsQuantity] = React.useState();
+//   const [cards, setCards] = React.useState([]);
+
+//   const generateRandomColors = length => {
+//     let res = [];
+//     const letters = "abcdef";
+
+//     for (let i = 0; i < length; i++) {
+//       let color = "#";
+
+//       for (let k = 0; k < 6; k++) {
+//         color += letters[Math.floor(Math.random() * 6)];
+//       }
+
+//       res.push(color);
+//     }
+
+//     return res;
+//   };
+
+//   React.useEffect(() => {
+//     setCardsQuantity(props.posts.length);
+//     setColors(generateRandomColors(cardsQuantity));
+//     setCards(generateCards(cardsQuantity));
+//   }, [cardsQuantity]);
+
+//   const getRandomColor = () => {
+//     return colors[Math.floor(Math.random() * colors.length)];
+//   };
+
+//   const generateCards = quantity => {
+//     let res = [];
+
+//     for (let i = 0; i < quantity; i++) {
+//       console.log(props.posts);
+//       res.push(
+//         <Card
+//           key={i}
+//           title={props.posts[i].node.frontmatter.title}
+//           leftColor={getRandomColor()}
+//           rightColor={getRandomColor()}
+//         />
+//       );
+//     }
+
+//     return res;
+//   };
+//   // console.log(cards);
+//   return <CardsStyled>{cards}</CardsStyled>;
+// };
 
 export default Cards;

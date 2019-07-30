@@ -2,7 +2,8 @@ import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import NavBar from "./ui/NavBar";
 import RemoveMargin from "./RemoveMargin";
-import Cards from "./ui/cards";
+// import Cards from "./ui/cards";
+import PostIndex from "./blog-posts";
 
 const globalMdx = {
   test: "siip!!"
@@ -17,6 +18,7 @@ export default ({ children }) => (
     <NavBar />
     <RemoveMargin />
     <div>{children}</div>
-    <Cards />
+    <PostIndex />
+    {/* <Cards /> */}
   </MDXProvider>
 );
