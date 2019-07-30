@@ -5,7 +5,7 @@ import Card from "./card";
 
 const CardsStyled = styled.div`
   max-width: 800px;
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
   display: flex;
   flex-flow: row wrap;
 `;

@@ -1,6 +1,19 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Cards from "./ui/cards";
+import styled from "styled-components";
+
+const Layout = styled.div`
+  max-width: 800px;
+  margin: 0px auto 50px auto;
+  display: flex;
+  flex-flow: row wrap;
+`;
+
+const H1 = styled.h1`
+  margin: 0px;
+  padding: 0px;
+`;
 
 const BlogIndex = () => {
   const data = useStaticQuery(graphql`
@@ -25,8 +38,8 @@ const BlogIndex = () => {
   const { edges: posts } = data.allMdx;
 
   return (
-    <div>
-      <h1>Available Jobs: {posts.length}</h1>
+    <Layout>
+      <H1>Available Jobs: {posts.length}</H1>
       {/* <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
@@ -38,7 +51,7 @@ const BlogIndex = () => {
         ))}
       </ul> */}
       {posts.length && <Cards posts={posts} />}
-    </div>
+    </Layout>
   );
 };
 
