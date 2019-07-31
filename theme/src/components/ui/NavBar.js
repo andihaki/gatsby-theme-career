@@ -30,7 +30,7 @@ const Ul = styled.ul`
   /*main-nav*/
   list-style-type: none;
   ${({ active }) =>
-    active &&
+    !active &&
     `
     display: none;
   `}

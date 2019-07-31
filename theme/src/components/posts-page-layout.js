@@ -52,15 +52,15 @@ export default function PageTemplate({ data: { mdx } }) {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Left>
         <Right>
-          <h1>{mdx.frontmatter.title}</h1>
+          <h1>{mdx.frontmatter.title || "title"}</h1>
           <div>
             <ImgFunction src={logo} alt="Logo" />
 
-            {mdx.frontmatter.function}
+            {mdx.frontmatter.function || "function"}
           </div>
           <div>
             <ImgLocation src={location} alt="Logo" />
-            {mdx.frontmatter.location}
+            {mdx.frontmatter.location || "location"}
           </div>
           <div>
             <a
