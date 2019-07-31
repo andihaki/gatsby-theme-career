@@ -185,7 +185,7 @@ const NavBar = () => {
             <Link to="/workplace">Our workplace</Link>
           </Li>
           <Li>
-            <Link to="/blog">Vacancy</Link>
+            <Link to="/vacancies">Vacancy</Link>
           </Li>
         </Ul>
       </Nav>
