@@ -184,9 +184,6 @@ const NavBar = () => {
           <Li>
             <Link to="/workplace">Our workplace</Link>
           </Li>
-          <Li>
-            <Link to="/vacancies">Vacancy</Link>
-          </Li>
         </Ul>
       </Nav>
     </NavBackground>

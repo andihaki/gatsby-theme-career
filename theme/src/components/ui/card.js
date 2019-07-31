@@ -59,8 +59,8 @@ const Card = props => (
       <CardGradient {...props}>
         <Title aria-labelledby="Judul">{props.title}</Title>
       </CardGradient>
-      <CardColor color={props.leftColor}>{props.leftColor}</CardColor>
-      <CardColor color={props.rightColor}>{props.rightColor}</CardColor>
+      <CardColor color={props.leftColor}>{props.function}</CardColor>
+      <CardColor color={props.rightColor}>{props.location}</CardColor>
     </Link>
   </CardStyled>
 );

@@ -3,7 +3,7 @@ import { MDXProvider } from "@mdx-js/react";
 import NavBar from "./ui/NavBar";
 import RemoveMargin from "./RemoveMargin";
 // import Cards from "./ui/cards";
-import PostIndex from "./blog-posts";
+import PostIndex from "./jobs-list";
 import styled from "styled-components";
 
 const globalMdx = {

@@ -59,6 +59,8 @@ class Cards extends React.Component {
             key={i}
             title={node.frontmatter.title}
             slug={node.fields.slug}
+            function={node.frontmatter.function}
+            location={node.frontmatter.location}
             leftColor={this.getRandomColor()}
             rightColor={this.getRandomColor()}
           />
