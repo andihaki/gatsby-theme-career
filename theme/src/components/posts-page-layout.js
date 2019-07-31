@@ -41,7 +41,7 @@ const ImgLocation = styled.img`
 `;
 
 export default function PageTemplate({ data: { mdx } }) {
-  console.log("posts-page-layout", mdx);
+  // console.log("posts-page-layout", mdx);
 
   return (
     <div>
