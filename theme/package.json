@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-theme-welldone",
+  "name": "gatsby-theme-career",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/andihaki/gatsby-theme-welldone.git",
+  "repository": "https://github.com/andihaki/gatsby-theme-career.git",
   "author": "Andi Hakim <andi.hakim.arif@gmail.com>",
   "license": "MIT",
   "scripts": {

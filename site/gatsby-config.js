@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ["gatsby-theme-welldone"]
+  plugins: ["gatsby-theme-career"]
 };
