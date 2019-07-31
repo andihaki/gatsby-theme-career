@@ -1,4 +1,4 @@
 [build]
   base = ""
   command = "yarn workspace gatsby-theme-welldone build"
-  publish = "public"
+  publish = "site/public"

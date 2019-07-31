@@ -39,7 +39,7 @@ const JobsList = () => {
   const { edges: posts } = data.allMdx;
 
   return (
-    <Layout>
+    <Layout style={{ maxWidth: "800px", margin: "0px auto 50px auto" }}>
       <H1>Available Jobs: {posts.length}</H1>
       {posts.length && <Cards posts={posts} />}
     </Layout>
