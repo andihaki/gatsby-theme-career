@@ -4,6 +4,7 @@ import NavBar from "./ui/NavBar";
 import RemoveMargin from "./RemoveMargin";
 // import Cards from "./ui/cards";
 import PostIndex from "./blog-posts";
+import styled from "styled-components";
 
 const globalMdx = {
   test: "siip!!"
@@ -13,12 +14,17 @@ const shortcodes = {
   Test
 };
 
-export default ({ children }) => (
+const Layout = styled.div`
+  max-width: 800px;
+  margin: 30px auto 50px auto;
+`;
+
+export default ({ children, path }) => (
   <MDXProvider globalMdx={globalMdx} components={shortcodes}>
     <NavBar />
     <RemoveMargin />
-    <div>{children}</div>
-    <PostIndex />
+    <Layout>{children}</Layout>
+    {path === "/" && <PostIndex />}
     {/* <Cards /> */}
   </MDXProvider>
 );

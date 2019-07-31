@@ -13,25 +13,33 @@
   "peerDependencies": {
     "@mdx-js/mdx": "^1.1.0",
     "@mdx-js/react": "^1.0.27",
+    "algoliasearch": "^3.33.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.0.0",
     "gatsby": "^2.13.40",
+    "gatsby-plugin-algolia": "^0.3.2",
     "gatsby-plugin-mdx": "^1.0.17",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-source-filesystem": "^2.1.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-instantsearch-dom": "^5.7.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@mdx-js/mdx": "^1.1.0",
     "@mdx-js/react": "^1.0.27",
+    "algoliasearch": "^3.33.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.0.0",
     "gatsby": "^2.13.40",
+    "gatsby-plugin-algolia": "^0.3.2",
     "gatsby-plugin-mdx": "^1.0.17",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-source-filesystem": "^2.1.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-instantsearch-dom": "^5.7.0",
     "styled-components": "^4.3.2"
   },
   "dependencies": {}
